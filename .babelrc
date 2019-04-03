@@ -6,6 +6,6 @@
     ],
     "plugins": [
       ["import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
-      ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"]
+      ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"],
     ]
 }

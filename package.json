@@ -1,12 +1,14 @@
 {
-  "name": "webpack_demo",
+  "name": "react-app",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --progress --colors --config webpack.prod.config.js",
-    "start": "webpack-dev-server --progress --colors --config webpack.dev.config.js --open"
+    "start": "webpack-dev-server --progress --colors --config webpack.dev.config.js --open",
+    "lint": "eslint --ext .js src/",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx src/"
   },
   "keywords": [
     "react"
@@ -17,13 +19,20 @@
     "antd-mobile": "^2.2.9",
     "echarts": "^4.1.0",
     "es6-promise": "^4.2.6",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "loglevel": "^1.6.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "react": "^16.8.3",
+    "react-css-modules": "^4.7.9",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",
-    "react-sublime-video": "^0.2.5"
+    "react-sublime-video": "^0.2.5",
+    "resolve-url-loader": "^3.0.1",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.5.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
@@ -33,11 +42,18 @@
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.11.0",
+    "lib-flexible": "^0.3.2",
+    "postcss-loader": "^3.0.0",
+    "px2rem-loader": "^0.1.9",
     "react-hot-loader": "^4.7.1",
-    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",

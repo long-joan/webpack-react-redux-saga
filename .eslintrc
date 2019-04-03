@@ -1,0 +1,12 @@
+{
+  "extends": "standard",
+  "rules": {
+    "import/no-extraneous-dependencies": ["off"],
+    "import/no-dynamic-require": ["off"],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-unused-vars": "off",
+    "semi":"off"
+
+  }
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../components/button';
 
-export default class Home extends Component {
+export default class Detail extends Component {
   constructor (prop) {
     super(prop);
     this.state = {
@@ -11,7 +11,7 @@ export default class Home extends Component {
   render () {
     return (
       <div>
-        <Button text={'Home'}/>
+        <Button text={'Detail'}/>
       </div>
     )
   }

@@ -1,14 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Home from './pages/home';
-import Login from './pages/login';
+import Bundle from './components/bundle';
+
+const Home = (props) => (
+  <Bundle load={() => import('./pages/home')}>
+      {(Home) => <Home {...props}/>}
+  </Bundle>
+);
+const Detail = (props) => (
+  <Bundle load={() => import('./pages/detail')}>
+      {(Detail) => <Detail {...props}/>}
+  </Bundle>
+);
 
 export const app = () => (
   <Router>
     <Switch>
-      <Route exact path="/login" component={Login} ></Route>
       <Route exact path="/home" component={Home} ></Route>
+      <Route exact path="/detail" component={Detail} ></Route>
+
       <Redirect to='home'/>
     </Switch>
   </Router>
-);
+)
