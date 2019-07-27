@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -100,11 +99,6 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './index.html',
-      inject: 'body'
     }),
     new CleanWebpackPlugin(['dist',
       'build'], {

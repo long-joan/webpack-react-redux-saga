@@ -6,12 +6,14 @@ const baseWebpackConfig = require('./webpack.base.config');
 
 module.exports = merge(baseWebpackConfig, {
   mode: 'production',
-  devtool: 'source-map',
   optimization: {
     minimizer: [
       new OptimizeCssAssetsWebpackPlugin(),
       new TerserWebpackPlugin({ sourceMap: true }),
       new HtmlWebpackPlugin({
+        filename: 'index.html',
+        template: './index.html',
+        inject: 'body',
         minify: {
           collapseWhitespace: true,
           removeComments: true,

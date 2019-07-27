@@ -1,5 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.config');
 module.exports = merge(baseWebpackConfig, {
   mode: 'development',
@@ -10,5 +11,12 @@ module.exports = merge(baseWebpackConfig, {
     historyApiFallback: true,
     compress: true
   },
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './index.html',
+      inject: 'body'
+    })
+  ]
 })
