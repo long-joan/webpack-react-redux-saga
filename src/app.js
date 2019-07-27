@@ -7,19 +7,15 @@ const Home = (props) => (
       {(Home) => <Home {...props}/>}
   </Bundle>
 );
-const Detail = (props) => (
-  <Bundle load={() => import('./pages/detail')}>
-      {(Detail) => <Detail {...props}/>}
-  </Bundle>
-);
 
 export const app = () => (
+
   <Router>
     <Switch>
       <Route exact path="/home" component={Home} ></Route>
-      <Route exact path="/detail" component={Detail} ></Route>
 
       <Redirect to='home'/>
     </Switch>
   </Router>
+
 )

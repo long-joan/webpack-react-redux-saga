@@ -5,7 +5,14 @@
     "stage-0"
     ],
     "plugins": [
-      ["import", { "libraryName": "antd", "libraryDirectory": "lib"}, "ant"],
-      ["import", { "libraryName": "ant-mobile", "libraryDirectory": "lib"}, "ant-mobile"],
+      [
+        "transform-runtime",
+        {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true,
+          "moduleName": "babel-runtime"
+        }
+      ]
     ]
 }

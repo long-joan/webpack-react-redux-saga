@@ -2,14 +2,17 @@ import React from 'react'
 // eslint-disable-next-line semi
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux'
+import store from './redux/store/store';
 import { app } from './app';
-// import 'antd-mobile/dist/antd-mobile.css';
 import '../src/css/app.less';
 
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Provider store={store}>
+        <Component />
+      </Provider>
     </AppContainer>,
     document.getElementById('root')
   )
