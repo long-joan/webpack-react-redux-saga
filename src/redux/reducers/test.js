@@ -1,4 +1,4 @@
-import { REQUEST_SUCCESS, REQUEST } from '../actions/index';
+import { REQUEST_SUCCESS, REQUEST } from '../contants/index';
 const initialState = {
   isRequest: {},
   requestData: []

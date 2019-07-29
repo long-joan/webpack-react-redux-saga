@@ -1,6 +1,4 @@
-export const REQUEST = 'REQUEST';
-export const REQUEST_SUCCESS = 'REQUEST_SUCCESS';
-
+import { REQUEST, REQUEST_SUCCESS } from '../contants/index';
 export const requestAction = (params) => {
   console.log(params);
   return {
